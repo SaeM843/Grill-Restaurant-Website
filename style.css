@@ -453,3 +453,11 @@ body.nav-active {
     transform: scaleX(0.5);
   }
 }
+
+.nav-open-btn .line-2 {
+  animation-delay: 150ms;
+}
+
+.nav-open-btn .line-3 {
+  animation-delay: 300ms;
+}
