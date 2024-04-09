@@ -28,3 +28,10 @@ const toggleNavbar = function () {
 };
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
+
+// Header
+const header = document.querySelector("[data-header]");
+
+let lastScrollPos = 0;
+
+const hideHeader = function () {};
