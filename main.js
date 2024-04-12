@@ -64,7 +64,7 @@ let lastSliderActiveItem = heroSliderItems[0];
 
 const updateSliderPos = function () {
   lastSliderActiveItem.classList.remove("active");
-  heroSlider[currentSlidePos].classList.add("active");
+  heroSliderItems[currentSlidePos].classList.add("active");
   lastSliderActiveItem = heroSliderItems[currentSlidePos];
 };
 
@@ -89,3 +89,28 @@ const slidePrev = function () {
 };
 
 heroSliderPrevBtn.addEventListener("click", slidePrev);
+
+// Auto Slider
+let autoSliderInterval;
+
+const autoSlide = function () {
+  autoSliderInterval = setInterval(function () {
+    slideNext();
+  }, 7000);
+};
+
+addEventOnElements(
+  [heroSliderNextBtn, heroSliderPrevBtn],
+  "mousemove",
+  function () {
+    clearInterval(autoSliderInterval);
+  }
+);
+
+addEventOnElements(
+  [heroSliderNextBtn, heroSliderPrevBtn],
+  "mouseout",
+  autoSlide
+);
+
+window.addEventListener("load", autoSlide);
