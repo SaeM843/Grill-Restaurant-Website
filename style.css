@@ -476,6 +476,10 @@ body.nav-active {
   max-width: max-content;
   z-index: -1;
 }
+
+.w-100 {
+  width: 100%;
+}
 /* Pre Loader */
 .preload {
   position: fixed;
