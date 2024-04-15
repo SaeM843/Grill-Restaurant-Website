@@ -993,7 +993,7 @@ body.nav-active {
 }
 
 .about .abs-img-2 {
-  bottom: -65px;
+  top: -65px;
   right: 0;
   overflow: hidden;
 }
