@@ -118,3 +118,21 @@ window.addEventListener("load", autoSlide);
 // Parallax Effect
 
 const parallaxItems = document.querySelectorAll("[data-parallax-item]");
+let x, y;
+
+window.addEventListener("mousemove", function (event) {
+  // console.log(event);
+
+  x = (event.clientX / window.innerWidth) * 10 - 5;
+  y = (event.clientY / window.innerWidth) * 10 - 5;
+
+  // reverse the number eg. 20 -> -20, -5 -> 5
+  x = x - x * 2;
+  y = y - y * 2;
+
+  parallaxItems.forEach((parallaxItem) => {
+    x = x * Number(parallaxItem.dataset.parallaxSpeed);
+    y = y * Number(parallaxItem.dataset.parallaxSpeed);
+    parallaxItem.style.transform = `translate3d(${x}px, ${y}px, 0px)`;
+  });
+});
