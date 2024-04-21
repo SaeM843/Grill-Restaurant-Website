@@ -1093,3 +1093,14 @@ body.nav-active {
 .menu-card .card-title:is(:hover, :focus-visible) {
   color: var(--gold-crayola);
 }
+
+.menu-card .badge {
+  background-color: var(--gold-crayola);
+  color: var(--eerie-black-1);
+  font-family: var(--fontFamily-forum);
+  max-width: max-content;
+  line-height: var(--lineHeight-6);
+  text-transform: uppercase;
+  padding-inline: 10px;
+  margin-block-start: 10px;
+}
