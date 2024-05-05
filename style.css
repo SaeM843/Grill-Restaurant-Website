@@ -1779,3 +1779,132 @@ textarea.input-field {
     grid-column: 1/3;
   }
 }
+
+/* responsive for larger than 992px screen */
+@media (min-width: 992px) {
+  /* CUSTOM PROPERTY */
+
+  :root {
+    /* Spacing */
+    --section-space: 100px;
+  }
+
+  /* REUSED STYLE */
+  :is(.service, .event) .container {
+    max-width: unset;
+  }
+
+  :is(.service, .event) .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  :is(.service, .event) .grid-list li:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  /* Topbar */
+  .topbar-item:not(.link) {
+    display: flex;
+  }
+
+  .topbar .item-2 {
+    margin-inline-end: auto;
+  }
+
+  /* Service */
+  .service .shape {
+    display: block;
+  }
+
+  .service .shape-1 {
+    bottom: 0;
+    left: 0;
+  }
+
+  .service .shape-2 {
+    top: 0;
+    right: 0;
+  }
+
+  /* About */
+  .about .container {
+    grid-template-columns: 0.7fr 1fr;
+    gap: 30px;
+  }
+
+  /* Special Dish */
+  .special-dish {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .special-dish-content {
+    padding-inline: 50px 25px;
+  }
+
+  .special-dish-content .container {
+    position: relative;
+  }
+
+  .special-dish .section-subtitle::after,
+  .special-dish .btn {
+    margin-inline: 0;
+  }
+
+  .special-dish-content .wrapper {
+    justify-content: flex-start;
+  }
+
+  .special-dish .abs-img {
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    animation: move 5s linear infinite;
+  }
+
+  /* Menu */
+  .menu .grid-list {
+    position: relative;
+    column-gap: 90px;
+  }
+
+  .menu .grid-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    border-inline-start: 1px solid var(--white-alpha-20);
+  }
+
+  /* Testimonials */
+
+  .testi-text {
+    max-width: 910px;
+    margin-inline: auto;
+  }
+
+  /* Reservation */
+  .reservation-form {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+  }
+
+  /* Footer */
+  .footer .grid-list {
+    grid-template-columns: 0.45fr 1fr 0.45fr;
+    align-items: center;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+    order: 1;
+    padding-block: 100px;
+  }
+
+  .footer-list:last-child {
+    order: 2;
+  }
+}
