@@ -2047,3 +2047,54 @@ textarea.input-field {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* responsive for larger than 1400px screen */
+@media (min-width: 1400px) {
+  /* Header */
+  .navbar {
+    margin-inline: auto;
+  }
+
+  /* About */
+  .about-content {
+    padding-inline-end: 90px;
+  }
+
+  .about .shape {
+    display: block;
+    top: 46px;
+    left: 0;
+  }
+
+  /* Special Dish */
+  .special-dish {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .special-dish .shape {
+    display: block;
+    bottom: 0;
+    transform: translateY(50%);
+    width: max-content;
+  }
+
+  /* Features */
+  .features {
+    overflow: hidden;
+  }
+
+  .features .shape {
+    display: block;
+  }
+
+  .features .shape-1 {
+    top: -100px;
+    right: 0;
+  }
+
+  .features .shape-2 {
+    bottom: 80px;
+    left: 0;
+  }
+}
